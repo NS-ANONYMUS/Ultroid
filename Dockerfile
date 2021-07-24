@@ -9,13 +9,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN git clone https://github.com/shamilhabeebnelli/Ultroid.git
 WORKDIR /root/TeamUltroid/
 
-# install main requirements.
-COPY requirements.txt /deploy/
-RUN pip3 install --no-cache-dir -r /deploy/requirements.txt
-
 # install addons requirements
-RUN wget -O /deploy/addons.txt https://git.io/JWdOk
-RUN pip3 install --no-cache-dir -r /deploy/addons.txt
 COPY . .
 
 CMD ["bash", "resources/startup/startup.sh"]
