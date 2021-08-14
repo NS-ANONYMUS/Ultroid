@@ -431,7 +431,7 @@ async def _(e):
         await e.client(BlockRequest(int(userid)))
     except Exception as ex:
         return await eor(xx, str(ex))
-    gb_msg = f"**#Gbanned** [{name}](tg://user?id={userid}) `in {chats} chats and added to gbanwatch!`"
+    gb_msg = f"**#Gbanned** [{name}](tg://user?id={userid}) `in 83 chats and added to gbanwatch!`"
     if reason != "":
         gb_msg += f"\n**Reason** - {reason}"
     await xx.edit(gb_msg)
@@ -549,7 +549,7 @@ async def _(e):
             except BaseException:
                 pass
     gmute(userid)
-    await xx.edit(f"`Gmuted` [{name}](tg://user?id={userid}) `in {chats} chats.`")
+    await xx.edit(f"`Gmuted` [{name}](tg://user?id={userid}) `in 83 chats.`")
 
 
 @ultroid_cmd(
