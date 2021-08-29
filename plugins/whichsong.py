@@ -8,7 +8,7 @@
 """
 ✘ Commands Available -
 
-• `{i}whichsong`
+• `{i}shazam`
    Reply to a song file, to recognise the song.
 """
 
@@ -21,7 +21,7 @@ from . import *
 shazam = Shazam()
 
 
-@ultroid_cmd(pattern="whichsong$")
+@ultroid_cmd(pattern="shazam$")
 async def song_recog(event):
     if not event.reply_to_msg_id:
         return await eod(event, "`Reply to a song file to recognise it!`", time=10)
